@@ -1,0 +1,13 @@
+{
+  "name": "my-blog",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-strapi": "^0.1.0",
+    "gridsome": "^0.7.0"
+  }
+}
