@@ -1,30 +1,34 @@
 version: "3"
 
 services:
-  gridsome:
+  nuxt:
     build:
       # context配下のDockefileを参照する
-      context: "./gridsome"
+      context: "./nuxt"
       dockerfile: "Dockerfile"
-    container_name: gridsome
+    container_name: nuxt
     ports:
       # 左がホスト，右がコンテナ
-      - 8080:8080
+      - 3000:3000
+    environment:
+      # INADDR_ANYというもの．ホストマシンの外部の接続にアクセス可能なホストアドレスを自動で提供する
+      HOST: 0.0.0.0
     # コンテナを立ち上げ続ける
     tty: true
     volumes:
       - ./app/my-blog:/app/my-blog
-      - ./app/gridsome.sh:/app/gridsome.sh
     # 作業ディレクトリ
-    working_dir: /app
+    working_dir: /app/my-blog
+    # 接続するまで
+    restart: always
     # 実行するコマンド
-    command: sh -c "sh gridsome.sh"
+    command: npm run dev
 
   strapi:
     image: "strapi/strapi"
     container_name: strapi
     ports:
-      - 8081:1337
+      - 3001:1337
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
@@ -59,7 +63,7 @@ services:
     environment:
       - TZ=Asia/Tokyo
     depends_on:
-      - gridsome
+      - nuxt
       - strapi
       - mysql
     volumes:

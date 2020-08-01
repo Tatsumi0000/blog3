@@ -52,6 +52,6 @@ MYSQL_ROOT_PASSWORD=root-password
 - [WebSocketのプロキシ](http://mogile.web.fc2.com/nginx/http/websocket.html)
 - [proxy_set_header Upgrade $http_upgrade;](https://qiita.com/YuukiMiyoshi/items/d56d99be7fb8f69a751b#proxy_set_header-upgrade-http_upgrade)
 - [実践編ーDockerを使ってnginxでリバースプロキシを立ててみる](https://qiita.com/zawawahoge/items/d58ab6b746625e8d4457)
-
+- [Nuxt.jsを動かすAlpineベースのDockerfileを作成する(C.UTF-8とは何か) ](https://blog.cloud-acct.com/posts/u-nuxtjs-dockerfile/)
 #### 作成メモ
 - Strapiがサブディレクトリでドメインを切り分けるのを推奨していないっぽい．ので，サブドメインで切り分けている．（サブディレクトリでの切り分けもできなくはないが別にこだわりがないのでサブドメインでいく）

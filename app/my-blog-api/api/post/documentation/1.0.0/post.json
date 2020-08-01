@@ -520,10 +520,6 @@
             "type": "string",
             "default": ""
           },
-          "subtitle": {
-            "type": "string",
-            "default": ""
-          },
           "article": {
             "type": "string",
             "default": ""
@@ -579,10 +575,6 @@
       "NewPost": {
         "properties": {
           "title": {
-            "type": "string",
-            "default": ""
-          },
-          "subtitle": {
             "type": "string",
             "default": ""
           },

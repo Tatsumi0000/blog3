@@ -15,14 +15,9 @@
       "default": "",
       "type": "text"
     },
-    "subtitle": {
-      "default": "",
-      "type": "text"
-    },
     "article": {
       "default": "",
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "image": {
       "model": "file",
